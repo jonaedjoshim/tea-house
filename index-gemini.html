@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tea House - Fresh Tea Time</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and custom theme elements -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#EF4444', // A strong red for CTAs and backgrounds
+                        'accent-orange': '#F59E0B',
+                        'light-bg': '#FFF7F5', // Very light off-white/pink for the footer
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Use Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styling for sleek button and shadow effects */
+        .btn-primary {
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+            /* Consistent vertical padding for sections */
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- Header & Hero Section -->
+    <header class="container mx-auto px-4 md:px-8 pt-16 pb-24">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Left Content: Text and CTA -->
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+                    It's good tea time at The Tea House
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                    The best balanced tea flavor is simple. Get the day's fresh burst of flavor and relaxation.
+                </p>
+                <button
+                    class="btn-primary bg-primary-red text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-red-700">
+                    Explore More
+                </button>
+            </div>
+
+            <!-- Right Content: Images and Rating -->
+            <div class="md:w-1/2 relative flex justify-center md:justify-end space-x-4">
+                <img src="https://placehold.co/180x280/FBBF24/FFFFFF?text=Golden+Tea" alt="Iced Golden Tea"
+                    class="rounded-3xl shadow-2xl transform rotate-3 z-10">
+                <img src="https://placehold.co/180x280/10B981/FFFFFF?text=Green+Tea" alt="Iced Green Tea"
+                    class="rounded-3xl shadow-2xl transform -rotate-6 translate-y-8 z-20">
+
+                <!-- Rating Overlay (mocked) -->
+                <div
+                    class="absolute bottom-[-20px] right-24 md:right-16 bg-white p-4 rounded-xl shadow-xl z-30 flex flex-col items-center">
+                    <div class="flex text-yellow-500 mb-1">
+                        <!-- 5 Star Icons -->
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27l6.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27l6.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27l6.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27l6.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03z" />
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27l6.18 3.73-1.64-7.03 5.46-4.73-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73-1.64 7.03z" />
+                        </svg>
+                    </div>
+                    <span class="text-lg font-bold text-gray-900">5.00</span>
+                    <span class="text-xs text-gray-500">100+ Ratings</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Products Section -->
+    <section class="section-padding pt-0">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Featured Products</h2>
+            <p class="text-gray-500 mb-12 max-w-xl mx-auto">
+                Discover our award-winning beverages. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Product Card 1 -->
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-md border border-gray-100 flex flex-col items-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/120x160/FCD34D/FFFFFF?text=Milk+Tea" alt="Milk Tea"
+                        class="rounded-xl mb-4 h-40 object-cover">
+                    <h3 class="font-semibold text-gray-900">Milk Tea</h3>
+                    <p class="text-sm text-gray-500">Creamy and Sweet</p>
+                </div>
+                <!-- Product Card 2 -->
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-md border border-gray-100 flex flex-col items-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/120x160/F87171/FFFFFF?text=Black+Tea" alt="Black Tea"
+                        class="rounded-xl mb-4 h-40 object-cover">
+                    <h3 class="font-semibold text-gray-900">Black Tea</h3>
+                    <p class="text-sm text-gray-500">Bold and Strong</p>
+                </div>
+                <!-- Product Card 3 -->
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-md border border-gray-100 flex flex-col items-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/120x160/60A5FA/FFFFFF?text=Lemon+Tea" alt="Lemon Tea"
+                        class="rounded-xl mb-4 h-40 object-cover">
+                    <h3 class="font-semibold text-gray-900">Lemon Tea</h3>
+                    <p class="text-sm text-gray-500">Zesty and Refreshing</p>
+                </div>
+                <!-- Product Card 4 -->
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-md border border-gray-100 flex flex-col items-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/120x160/34D399/FFFFFF?text=Green+Tea" alt="Green Tea"
+                        class="rounded-xl mb-4 h-40 object-cover">
+                    <h3 class="font-semibold text-gray-900">Green Tea</h3>
+                    <p class="text-sm text-gray-500">Fresh and Mild</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section: Great Tea, Freshly Presented -->
+    <section class="section-padding">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Left: Images -->
+                <div class="md:w-1/2 flex justify-center md:justify-start space-x-4">
+                    <img src="https://placehold.co/180x250/34D399/FFFFFF?text=Matcha" alt="Matcha Tea"
+                        class="rounded-3xl shadow-xl h-64 object-cover transform rotate-2">
+                    <img src="https://placehold.co/180x250/F59E0B/FFFFFF?text=Orange+Tea" alt="Orange Tea"
+                        class="rounded-3xl shadow-xl h-64 object-cover transform -rotate-3 translate-y-10">
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+                        Great Tea, Freshly Presented
+                    </h2>
+                    <p class="text-gray-600 mb-8">
+                        We blend traditional tea methods with modern refinement. Every cup is a commitment to quality,
+                        ensuring a perfect taste profile every time.
+                    </p>
+
+                    <!-- Feature 1 -->
+                    <div class="mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Unique Taste</h4>
+                        <p class="text-gray-500">
+                            Our proprietary blending methods give our tea a distinct, slightly sweet flavor profile that
+                            delights the senses.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Premium Quality</h4>
+                        <p class="text-gray-500">
+                            We use hand-picked leaves from the finest gardens, ensuring the highest standards of quality
+                            and freshness for you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section-padding py-24 bg-primary-red">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Left: Title and CTA -->
+                <div class="lg:w-1/3 text-white">
+                    <h2 class="text-4xl font-extrabold mb-4">
+                        Meet Our Super Clients
+                    </h2>
+                    <p class="text-red-200 mb-8">
+                        Hear why our customers love us. Their satisfaction is the greatest compliment to our dedication
+                        to fresh, high-quality beverages.
+                    </p>
+                    <button
+                        class="bg-white text-primary-red font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-gray-100 transition-colors duration-300">
+                        Show All
+                    </button>
+                </div>
+
+                <!-- Right: Testimonials -->
+                <div class="lg:w-2/3 grid gap-6">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl relative">
+                        <!-- Mock Profile Image -->
+                        <img src="https://placehold.co/50x50/3B82F6/FFFFFF?text=JP" alt="Client Avatar"
+                            class="rounded-full w-12 h-12 float-left mr-4">
+                        <p class="italic text-gray-700 mb-4">
+                            "The best balanced flavor tea I've ever tasted. I recommend this to anyone looking for a
+                            refreshing, daily pick-me-up. The staff is wonderful too!"
+                        </p>
+                        <div class="clear-both">
+                            <p class="font-semibold text-gray-900">John P.</p>
+                            <p class="text-sm text-gray-500">Software Engineer</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl relative">
+                        <img src="https://placehold.co/50x50/10B981/FFFFFF?text=AA" alt="Client Avatar"
+                            class="rounded-full w-12 h-12 float-left mr-4">
+                        <p class="italic text-gray-700 mb-4">
+                            "Premium quality leaves and excellent service. This tea house has quickly become my go-to
+                            spot for both a peaceful afternoon and a quick grab-and-go cup."
+                        </p>
+                        <div class="clear-both">
+                            <p class="font-semibold text-gray-900">Anna A.</p>
+                            <p class="text-sm text-gray-500">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="section-padding">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">News & Events</h2>
+            <p class="text-gray-500 mb-12 max-w-xl mx-auto">
+                Stay up-to-date with our latest offerings, health tips, and community events.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <div class="text-left bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <img src="https://placehold.co/400x250/FEE2E2/EF4444?text=Healthy+Teas" alt="Tea Packaging"
+                        class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 uppercase font-semibold mb-2">Health, 2024</p>
+                        <h3 class="font-bold text-lg text-gray-900 mb-3 leading-snug">
+                            Discovering 8 points for Healthy Life
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Learn about the eight key benefits of regularly incorporating fresh tea into your daily
+                            routine.
+                        </p>
+                        <a href="#" class="text-primary-red font-semibold text-sm hover:underline">LEARN MORE &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="text-left bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <img src="https://placehold.co/400x250/D1FAE5/10B981?text=Tea+Brewing" alt="Tea Brewing"
+                        class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 uppercase font-semibold mb-2">Brewing, 2024</p>
+                        <h3 class="font-bold text-lg text-gray-900 mb-3 leading-snug">
+                            Mastering the definitions of packages of Black Tea
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            A deep dive into the types of black tea and the best preparation techniques.
+                        </p>
+                        <a href="#" class="text-primary-red font-semibold text-sm hover:underline">LEARN MORE &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="text-left bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <img src="https://placehold.co/400x250/FCE7D7/F59E0B?text=Recipe+Ideas" alt="Hot Tea"
+                        class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 uppercase font-semibold mb-2">Recipes, 2024</p>
+                        <h3 class="font-bold text-lg text-gray-900 mb-3 leading-snug">
+                            Creating 5 points for Refreshing Recipes
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Five simple, refreshing tea recipes you can make at home in minutes.
+                        </p>
+                        <a href="#" class="text-primary-red font-semibold text-sm hover:underline">LEARN MORE &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light-bg pt-20 pb-6 border-t border-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row justify-between gap-12 mb-12">
+
+                <!-- Column 1: Logo and CTA -->
+                <div class="lg:w-1/4">
+                    <div class="flex items-center text-primary-red text-2xl font-bold mb-6">
+                        <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M15 16H8V14h7v2zm0-4H8v-2h7v2zm3 6V8l-6-6-6 6v10H3v3h18v-3h-3zM12 4.41L15.59 8H8.41L12 4.41z" />
+                        </svg>
+                        The Tea House
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">Ready to get started?</p>
+                    <button
+                        class="btn-primary bg-primary-red text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-red-700">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Columns 2, 3, 4: Links -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:w-3/4 gap-8">
+                    <!-- Quick Links -->
+                    <div>
+                        <h5 class="font-bold text-gray-900 mb-4">Quick Links</h5>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-primary-red">About Us</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Pricing</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Blog</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Service -->
+                    <div>
+                        <h5 class="font-bold text-gray-900 mb-4">Our Service</h5>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-primary-red">Tea Subscriptions</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Corporate Orders</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Gift Cards</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Delivery Info</a></li>
+                        </ul>
+                    </div>
+                    <!-- Help -->
+                    <div>
+                        <h5 class="font-bold text-gray-900 mb-4">Help</h5>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-primary-red">Support</a></li>
+                            <li><a href="#" class="hover:text-primary-red">Contact</a></li>
+                            <li><a href="#" class="hover:text-primary-red">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 5: Subscription and Social -->
+                <div class="lg:w-1/4">
+                    <h5 class="font-bold text-gray-900 mb-4">Subscribe to our Newsletter</h5>
+                    <form class="flex mb-6">
+                        <input type="email" placeholder="Email here"
+                            class="p-3 w-full rounded-l-xl focus:ring-primary-red focus:border-primary-red border border-gray-300"
+                            required>
+                        <button type="submit"
+                            class="bg-primary-red p-3 rounded-r-xl text-white hover:bg-red-700 transition-colors">
+                            <!-- Arrow right icon (mocked SVG) -->
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </form>
+
+                    <h5 class="font-bold text-gray-900 mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <!-- Facebook Icon (mocked SVG) -->
+                        <a href="#" class="text-gray-500 hover:text-primary-red transition-colors">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.655 9.157 8.44 9.924V14.25H7.5V12H10.44V9.33c0-3.007 1.799-4.686 4.536-4.686 1.314 0 2.68.235 2.68.235V7.8h-1.55c-1.547 0-2.035.96-2.035 1.944V12H18.5l-.6 2.25h-2.94v7.674c4.785-.767 8.44-4.908 8.44-9.924C22 6.477 17.523 2 12 2z" />
+                            </svg>
+                        </a>
+                        <!-- Twitter Icon (mocked SVG) -->
+                        <a href="#" class="text-gray-500 hover:text-primary-red transition-colors">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.954 4.57a10 10 0 01-2.825.775 4.932 4.932 0 002.163-2.723c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482 13.92 13.92 0 01-10.11-5.125 4.92 4.92 0 001.524 6.573 4.887 4.887 0 01-2.228-.616v.062a4.945 4.945 0 003.95 4.836 4.92 4.92 0 01-2.215.085 4.93 4.93 0 004.604 3.42c-3.23 2.536-7.307 4.053-11.75 4.053a13.956 13.956 0 007.412 2.17c8.91 0 13.78-7.36 13.78-13.78.002-.211 0-.422-.015-.633a9.97 9.97 0 002.44-2.527z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram Icon (mocked SVG) -->
+                        <a href="#" class="text-gray-500 hover:text-primary-red transition-colors">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.125 3.125a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0zm-8.25 1.5H7.5A4.5 4.5 0 003 12v1.5a4.5 4.5 0 004.5 4.5h1.5v-6h-3v-1.5h3V8.25c0-1.657.672-3 3-3h1.5v3h-1.5c-.345 0-.75.155-.75.75v1.5h3v1.5h-3v6h4.5a4.5 4.5 0 004.5-4.5V7.5h-1.5a4.5 4.5 0 00-4.5 4.5v-3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Line -->
+            <div class="pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Design. All rights reserved. Mock-up by Tea House.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
